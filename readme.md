@@ -1,4 +1,29 @@
-<div align="center">
+<p align="center"> <img src="https://img.shields.io/badge/AI-Multi--Agent-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/LangChain-Powered-green?style=for-the-badge" /> <img src="https://img.shields.io/badge/LangGraph-Orchestration-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/Streamlit-UI-red?style=for-the-badge" /> </p> <p align="center"> <b>Self-Healing Multi-Agent Research Intelligence System</b><br> <i>Search → Read → Write → Critique → Self-Heal → Verify</i> </p>
+⚡ Live System Flow
+<p align="center">
+</p>
+🚀 What is ResearchMind?
+
+ResearchMind is an autonomous AI research engine that:
+
+🌐 Searches the web using AI agents
+📄 Extracts and cleans real content
+✍️ Generates structured research reports
+🧠 Critiques its own output
+🔁 Improves itself via self-healing loops
+🔍 Fact-checks every major claim
+🧠 Core Architecture
+<p align="center">
+Stage	Component	Role
+🔎 1	Search Agent	Finds top web results
+📄 2	Reader Agent	Scrapes clean content
+✍️ 3	Writer Chain	Generates report
+🎯 4	Critic Chain	Scores output
+🔁 5	Self-Healing Loop	Improves query
+🔬 6	Claim Verifier	Fact-checks claims
+</p>
+⚙️ Tech Stack
+<p align="center">
 
 
 
@@ -11,173 +36,64 @@
 
 
 
-<br/>
+</p>
+🔁 Self-Healing Intelligence
 
-🔥 Autonomous AI Research Engine with Self-Healing Intelligence
+The system doesn’t fail — it iterates until it improves.
 
-<img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="500"/> </div>
-🧠 What is ResearchMind?
+If score < 7 → system refines query
+Re-searches better sources
+Merges new knowledge
+Rewrites improved report
+Repeats max 3 times
+🔬 Claim Verification Engine
 
-ResearchMind is a next-generation autonomous AI research pipeline that:
+Each final report is validated:
 
-📌 Takes any topic
-🌐 Searches the web
-📄 Extracts real content
-✍️ Writes structured reports
-🧠 Critiques itself
-🔁 Improves iteratively
-🔍 Verifies factual claims
+✔ Extract top claims
+✔ Run fresh web search
+✔ Compare evidence
+✔ Assign verdict:
 
-It behaves like a self-improving research analyst powered by LLM agents.
-
-⚡ Key Features
-<table> <tr> <td>🌐 Web Intelligence</td> <td>Real-time search using Tavily AI agents</td> </tr> <tr> <td>📄 Smart Extraction</td> <td>Cleans and processes web pages automatically</td> </tr> <tr> <td>✍️ Report Generation</td> <td>Structured, human-like research writing</td> </tr> <tr> <td>🧠 Self-Critique Loop</td> <td>AI evaluates and improves its own output</td> </tr> <tr> <td>🔁 Self-Healing System</td> <td>Automatically retries low-quality results</td> </tr> <tr> <td>🔍 Fact Verification</td> <td>Claim-level validation using external sources</td> </tr> </table>
-🏗️ System Architecture
-User Query
-    │
-    ▼
-🌐 Stage 1: Search Agent (Tavily)
-    │
-    ▼
-📄 Stage 2: Reader Agent (Web Scraper)
-    │
-    ▼
-✍️ Stage 3: Writer + Critic Loop
-    │     ├── Writer Chain → Generates Report
-    │     └── Critic Chain → Scores Report (0–10)
-    │
-    ▼
-🔁 Stage 4: Self-Healing Engine
-    │     ├── Query Refinement
-    │     ├── Re-search + Re-scrape
-    │     └── Iterative Improvement (max 3)
-    │
-    ▼
-🔍 Stage 5: Claim Verification Layer
-    │     ├── Extract Facts
-    │     └── Validate via Web Search
-    │
-    ▼
-🏁 Final Output
-✔ Research Report  
-✔ Critic Analysis  
-✔ Healing History  
-✔ Claim Verdicts  
-🧩 Tech Stack
-🧠 LangChain / LangGraph
-🤖 Mistral / OpenAI LLMs
-🌐 Tavily Search API
-🕷️ Web Scraping Tools
-🎯 Streamlit UI
-🐍 Python 3.10+
+Status	Meaning
+✅ VERIFIED	Supported by evidence
+⚠️ UNVERIFIED	Not enough proof
+❌ CONTRADICTED	Conflicting sources
 📁 Project Structure
 ResearchMind/
 │
-├── app.py              # 🌐 Streamlit UI
-├── pipeline.py         # 🧪 CLI Runner
-├── agents.py           # 🧠 LLM Agents & Chains
-├── tools.py            # 🔧 Search + Scraper Tools
-│
+├── app.py              # Streamlit UI
+├── pipeline.py         # CLI runner
+├── agents.py           # LLM agents
+├── tools.py            # Search + scraping tools
 ├── requirements.txt
-├── .env
-└── README.md
-⚙️ How It Works (Deep Logic)
-🔎 1. Search Agent
-Uses ReAct LLM agent
-Tool: Tavily Search
-Returns top relevant sources
-📄 2. Reader Agent
-Scrapes full content from URLs
-Removes ads, scripts, UI clutter
-Keeps ~3000 chars per page
-✍️ 3. Writer + Critic System
-
-Writer:
-
-Generates structured Markdown report
-
-Critic:
-
-Scores report (0–10)
-Gives feedback for improvement
-🔁 4. Self-Healing Loop
-
-If score < 7:
-
-Critic Feedback → Query Refinement → New Search → New Report
-
-Stops when:
-
-Score ≥ 7 OR
-Max iterations reached (3)
-🔍 5. Claim Verification
-Extracts top factual claims
-Verifies via fresh web search
-Outputs:
-Verdict	Meaning
-✅ VERIFIED	Strong evidence
-⚠️ UNVERIFIED	Not enough proof
-❌ CONTRADICTED	Conflicting sources
-🚀 Installation
+└── .env
+⚡ Quick Start
 git clone https://github.com/your-username/researchmind.git
 cd researchmind
-🧪 Setup Environment
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-📦 Install Dependencies
+source .venv/bin/activate
 pip install -r requirements.txt
-🔐 Environment Variables
-MISTRAL_API_KEY=your_mistral_key
-TAVILY_API_KEY=your_tavily_key
-▶️ Run Project
-🌐 Streamlit UI
+🔐 Environment Setup
+MISTRAL_API_KEY=your_key
+TAVILY_API_KEY=your_key
+▶️ Run
+🖥 Streamlit UI
 streamlit run app.py
-🧪 CLI Mode
+💻 CLI Mode
 python pipeline.py
-⚙️ Configuration
-Parameter	Default	Description
-MIN_SCORE	7.0	Quality threshold
-MAX_ITERATIONS	3	Retry limit
-MAX_CLAIMS	5	Claims verified
-🧠 Why This Architecture Works
-🔗 Separation of Intelligence
-Writer → Narrative quality
-Critic → Quality control
-Extractor → Factual accuracy
-🔁 Self-Healing Advantage
-
-Instead of failing:
-
-The system improves itself automatically
-
-⚖️ Why 3 Iterations?
-
-Balances:
-
-Cost 💰
-Latency ⚡
-Quality 📈
-⚠️ Limitations
-Some sites block scraping
-Verification depends on search quality
-Latency increases with iterations
-Model-dependent performance
-🚀 Future Roadmap
+🧠 Why This Project is Powerful
+Self-improving AI pipeline (rare in portfolios)
+Real multi-agent orchestration (not single LLM calls)
+Built-in reasoning + critique loop
+Fact verification system
+Production-level architecture thinking
+🚀 Future Upgrades
 🧠 Vector DB memory (RAG layer)
 ⚡ Parallel claim verification
-🗳️ Multi-critic voting system
 📄 PDF export reports
-📊 LangSmith tracing
-💾 Web caching layer
-⭐ Show Your Support
-
-If you like this project:
-
-⭐ Star the repo
-🍴 Fork it
-🧠 Build on top of it
-🧑‍💻 Author
-
-Pranav Amrutkar
-
-Building autonomous AI systems, one agent at a time 🚀
+🤖 Multi-model critic voting
+📊 LangSmith observability
+🧩 Caching layer for search results
+📜 License
+MIT License © 2026 ResearchMind
